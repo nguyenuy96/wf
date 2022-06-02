@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane fx:id="bookPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="sample.controller.BookController">
+  <tabs>
+    <Tab fx:id="bookTab" text="Books">
+      <content>
+        <AnchorPane fx:id="bookAnchorPanel" minHeight="0.0" minWidth="0.0" onMouseClicked="#onClickBookMenu" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView id="bookView" fx:id="bookTable" prefHeight="373.0" prefWidth="600.0">
+                    <columns>
+                      <TableColumn id="bookId" fx:id="bookId" prefWidth="75.0" text="ID" />
+                        <TableColumn id="bookName" fx:id="bookName" prefWidth="188.0" text="NAME" />
+                        <TableColumn id="author" fx:id="author" minWidth="0.0" prefWidth="196.0" text="AUTHOR" />
+                        <TableColumn id="total" fx:id="total" minWidth="0.0" prefWidth="72.0" text="TOTAL" />
+                        <TableColumn id="remain" fx:id="remain" prefWidth="68.0" text="REMAIN" />
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Receipt">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
